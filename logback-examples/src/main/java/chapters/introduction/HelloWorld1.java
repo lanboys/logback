@@ -16,6 +16,10 @@ package chapters.introduction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ *   中文手册 https://logbackcn.gitbook.io/logback/
+ *   英文手册 https://logback.qos.ch/manual/index.html
+ */
 public class HelloWorld1 {
 
     public static void main(String[] args) {

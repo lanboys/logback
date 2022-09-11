@@ -42,6 +42,7 @@ public class EnsureExceptionHandling implements PostCompileProcessor<ILoggingEve
             // this should never happen
             throw new IllegalArgumentException("cannot process empty chain");
         }
+        // 检查是否有设置处理异常的 转换器，如果没有这里可以确保最终一定会有一个转换器被添加到末尾，
         if (!chainHandlesThrowable(head)) {
             Converter<ILoggingEvent> tail = ConverterUtil.findTail(head);
             Converter<ILoggingEvent> exConverter = null;

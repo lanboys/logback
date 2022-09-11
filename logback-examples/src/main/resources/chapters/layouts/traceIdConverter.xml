@@ -1,0 +1,16 @@
+<configuration >
+
+  <conversionRule conversionWord="tEx"
+                  converterClass="chapters.layouts.TraceIdThrowableProxyConverter" />
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[%X{traceId}] %-5level [%thread]: %message%n%tEx</pattern>
+    </encoder>
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
+

@@ -62,6 +62,7 @@ abstract public class PatternLayoutBase<E> extends LayoutBase<E> {
             @SuppressWarnings("unchecked")
             Map<String, String> contextMap = (Map<String, String>) context
                     .getObject(CoreConstants.PATTERN_RULE_REGISTRY);
+            // 将自定义的 转换器 添加进去
             if (contextMap != null) {
                 effectiveMap.putAll(contextMap);
             }
@@ -77,6 +78,7 @@ abstract public class PatternLayoutBase<E> extends LayoutBase<E> {
             return;
         }
         try {
+            // 根据设置的 pattern 解析出 转换器链 convert
             Parser<E> p = new Parser<E>(pattern);
             if (getContext() != null) {
                 p.setContext(getContext());

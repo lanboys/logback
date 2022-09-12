@@ -1,13 +1,13 @@
 /**
  * Logback: the reliable, generic, fast and flexible logging framework.
  * Copyright (C) 1999-2015, QOS.ch. All rights reserved.
- *
+ * <p>
  * This program and the accompanying materials are dual-licensed under
  * either the terms of the Eclipse Public License v1.0 as published by
  * the Eclipse Foundation
- *
- *   or (per the licensee's choosing)
- *
+ * <p>
+ * or (per the licensee's choosing)
+ * <p>
  * under the terms of the GNU Lesser General Public License version 2.1
  * as published by the Free Software Foundation.
  */
@@ -31,7 +31,7 @@ public class ExceptionEvaluatorExample {
             JoranConfigurator configurator = new JoranConfigurator();
             configurator.setContext(lc);
             lc.reset();
-            configurator.doConfigure(args[0]);
+            configurator.doConfigure(SampleLogging.class.getResource("/chapters/layouts/exceptionEvaluatorConfig.xml").getPath());
         } catch (JoranException je) {
             // StatusPrinter will handle this
         }

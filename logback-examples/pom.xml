@@ -50,6 +50,10 @@
       <artifactId>jansi</artifactId>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.codehaus.janino</groupId>
+      <artifactId>janino</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

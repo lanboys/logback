@@ -1,4 +1,5 @@
-<configuration >
+<configuration packagingData="true">
+  <!--异常日志打印时，带上 jar 包-->
 
   <conversionRule conversionWord="tEx"
                   converterClass="chapters.layouts.TraceIdThrowableProxyConverter" />

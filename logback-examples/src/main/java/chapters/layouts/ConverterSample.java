@@ -61,6 +61,7 @@ public class ConverterSample {
         LoggerContext loggerContext = rootLogger.getLoggerContext();
         loggerContext.reset();
 
+        // 异常日志打印时，带上 jar 包
         loggerContext.setPackagingDataEnabled(true);
 
         Map<String, String> ruleRegistry = (Map<String, String>) loggerContext
